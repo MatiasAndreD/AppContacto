@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearUsuario">
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/detalle_direccion"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/foto_01" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/detalle_nombre"
+        android:inputType="textPersonName|text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+
+    <EditText
+        android:id="@+id/etApellido"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/detalle_apellido"
+        android:inputType="textPersonName|text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+    <EditText
+        android:id="@+id/etTrabajo"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/detalle_trabajo"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApellido" />
+
+    <EditText
+        android:id="@+id/etDireccion"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/detalle_telefono"
+        android:inputType="phone"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTrabajo" />
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/detalle_email"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDireccion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

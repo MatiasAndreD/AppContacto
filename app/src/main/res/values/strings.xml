@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppContacto</string>
+    <string name="buscar">Buscar contacto</string>
+    <string name="nuevocontacto">Nuevo contacto</string>
+    <string name="cswitch">Cambiar vista</string>
+    <string name="detalle_nombre">Nombre:</string>
+    <string name="detalle_apellido">Apellidos:</string>
+    <string name="detalle_trabajo">Trabajo:</string>
+    <string name="detalle_direccion">Dirección:</string>
+    <string name="detalle_telefono">Telefono:</string>
+    <string name="detalle_email">Email:</string>
+    <string name="Eliminar">Eliminar Contacto</string>
+    <string name="modificar">Modificar contacto</string>
+</resources>

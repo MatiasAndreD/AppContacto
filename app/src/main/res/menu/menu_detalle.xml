@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btnEliminar"
+        android:icon="@drawable/eliminar_contacto"
+        android:title="@string/Eliminar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/btnModificar"
+        android:icon="@drawable/ic_baseline_create_24"
+        android:title="@string/modificar"
+        app:showAsAction="ifRoom" />
+</menu>
