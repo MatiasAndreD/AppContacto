@@ -31,6 +31,25 @@ class Adaptador(var context: Context, items:ArrayList<Contacto>): BaseAdapter() 
     override fun getItemId(position: Int): Long {
         return position.toLong()
     }
+
+    fun addItem(item:Contacto){
+        copiaitems?.add(item)
+        items = ArrayList(copiaitems)
+        notifyDataSetChanged()
+    }
+
+    fun removeItem(index:Int){
+        copiaitems?.removeAt(index)
+        items = ArrayList(copiaitems)
+        notifyDataSetChanged()
+    }
+
+    fun updateItem(index:Int, nuevoContacto:Contacto){
+        copiaitems?.set(index, nuevoContacto)
+        items = ArrayList(copiaitems)
+        notifyDataSetChanged()
+    }
+
     //N O T I F Y   D A T A   S E T   C H A N G E D: Notifica a los observadores adjuntos que los datos subyacentes
     // se han modificado y que cualquier Vista que refleje el conjunto de datos debe actualizarse.
     fun filtrar(str:String){
@@ -79,6 +98,8 @@ class Adaptador(var context: Context, items:ArrayList<Contacto>): BaseAdapter() 
 
         return vista!!
     }
+
+
 
     private class ViewHolder(vista: View){
         var nombre: TextView? = null

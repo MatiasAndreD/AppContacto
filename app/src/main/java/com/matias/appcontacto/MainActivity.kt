@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
+import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
@@ -15,24 +16,24 @@ import androidx.appcompat.widget.Toolbar
 class MainActivity : AppCompatActivity() {
 
     var lista:ListView? = null
-    var adaptador:Adaptador? =null
+
 
     companion object{
         var contactos:ArrayList<Contacto>? = null
+        var adaptador:Adaptador? =null
 
         fun AgregarContacto(contacto: Contacto){
-            contactos?.add(contacto)
+            adaptador?.addItem(contacto)
     }
         fun obtenerContacto(index:Int):Contacto{
-            return contactos?.get(index)!!
+            return adaptador?.getItem(index) as Contacto
         }
 
         fun EliminarContacto(index:Int){
-            contactos?.removeAt(index)
+            adaptador?.removeItem(index)
         }
         fun ActualizarContacto(index: Int, nuevoContacto:Contacto){
-
-            contactos?.set(index,nuevoContacto)
+            adaptador?.updateItem(index,nuevoContacto)
 
         }
 
@@ -45,6 +46,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
 
         //---------- V A R I A B L E S   P A R A   T O O L B A R --------------------
         toolbar = findViewById(R.id.toolbar)
@@ -97,10 +101,10 @@ class MainActivity : AppCompatActivity() {
             }
         })
         //__________________________________________________________________________________________________
-
-
-
         searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+
+
+
         return super.onCreateOptionsMenu(menu)
     }
 
